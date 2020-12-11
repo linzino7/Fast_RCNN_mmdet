@@ -97,9 +97,9 @@ $ python3 mmdetection/tools/train.py configs/mask_rcnn/mask_rcnn_r50_zino.py
 ```
 The expected training times are:
 
-Model | GPUs | Image size | Training Epochs | Training Time | Bach Size |
------------- | ------------- | ------------- | ------------- | ------------- | -------------|
-Fast_RCNN | 1x NVIDIA GTX 1080 | 608x608 | 1 | 2.5 hours | 4 |
+Model | GPUs | Image size | Training Epochs | Training Time | 
+------------ | ------------- | ------------- | ------------- | ------------- | 
+Fast_RCNN | 1x NVIDIA GTX 1080 | 1333, 800 | 100 | 6 hours | 
 
 
 ### Muti-GPU Training
