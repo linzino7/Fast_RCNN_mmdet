@@ -95,11 +95,13 @@ To train models, run following commands.
 ```
 $ python3 mmdetection/tools/train.py configs/mask_rcnn/mask_rcnn_r50_zino.py
 ```
+This project used Pre-train model. But according the mmdetection doc, it used pre-train backbone restnet-50 on ImageNet.
+
 The expected training times are:
 
-Model | GPUs | Image size | Training Epochs | Training Time | 
------------- | ------------- | ------------- | ------------- | ------------- | 
-Fast_RCNN | 1x NVIDIA GTX 1080 | 1333, 800 | 100 | 6 hours | 
+Model | GPUs | Image size | Training Epochs | Training Time | mAP|
+------------ | ------------- | ------------- | ------------- | ------------- | ------------- | 
+Fast_RCNN | 1x NVIDIA GTX 1080 | 1333, 800 | 100 | 6 hours | 0.
 
 
 ### Muti-GPU Training
