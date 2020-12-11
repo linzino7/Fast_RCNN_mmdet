@@ -59,7 +59,7 @@ After downloading images and spliting json file, the data directory is structure
 #### Download Classes Image
 Dataset: https://drive.google.com/drive/folders/1nglaZBJJ_Amonndw4nIVBh_UuCpp4gee?usp=sharing
 
-Download and extract *tain.tar.gz* and *test.tar.gz* to *data* directory.
+Download and extract *train_images.zip* and *test_images.zip* to *data* directory.
 
 #### Splited training and validation json used coco style
 Use split8020.py to make train.txt .
