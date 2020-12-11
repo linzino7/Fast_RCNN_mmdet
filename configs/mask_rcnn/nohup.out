@@ -1,0 +1,12 @@
+NOTE: When using the `ipython kernel` entry point, Ctrl-C will not work.
+
+To exit, you will have to explicitly quit this process, by either sending
+"quit" from a client, or using Ctrl-\ in UNIX-like environments.
+
+To read more about this, see https://github.com/ipython/ipython/issues/2049
+
+
+To connect another client to this kernel, use:
+    --existing /mnt/nas/homes/zino/cv/kernel-0281a679a473_loc.json
+[SpyderKernelApp] WARNING | No such comm: 0da5d63a3a2f11ebb58200bb608c3bfa
+[SpyderKernelApp] WARNING | No such comm: 0da5d63a3a2f11ebb58200bb608c3bfa
