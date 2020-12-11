@@ -45,9 +45,6 @@ To reproduct my submission without retrainig, do the following steps:
 3.  [Inference](#Inference)
 
 ## Dataset Preparation
-All required files except images are already in data directory.
-If you generate CSV files (duplicate image list, split, leak.. ), original files are overwritten. The contents will be changed, but It's not a problem.
-
 ### Prepare Images
 After downloading images and spliting json file, the data directory is structured as:
 ```
@@ -64,7 +61,7 @@ Dataset: https://drive.google.com/drive/folders/1nglaZBJJ_Amonndw4nIVBh_UuCpp4ge
 
 Download and extract *tain.tar.gz* and *test.tar.gz* to *data* directory.
 
-### Splited training and validation json used coco style
+#### Splited training and validation json used coco style
 Use split8020.py to make train.txt .
 ```
 $ python3 split8020.py
