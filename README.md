@@ -108,6 +108,9 @@ I didn't test muti-GPU training.
 ```
 $ python3 mmtosummit.py
 ```
+## result
+![](https://github.com/linzino7/Fast_RCNN_mmdet/blob/main/imgresult/in_2009_003123.jpg)
+![](https://github.com/linzino7/Fast_RCNN_mmdet/blob/main/imgresult/in_2009_003938.jpg)
 
 # mmdetection Modify
 
