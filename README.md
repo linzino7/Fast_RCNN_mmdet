@@ -10,6 +10,32 @@ More detail can see [mmdetection eetting start](https://github.com/open-mmlab/mm
 - 31 RAM
 - NVIDIA GTX 1080 12G *1
 
+## ENV
+- CUDA 10.2
+- Pytorch 1.6.0  
+- mmcv-full latest+torch1.7.0+cu110
+- mmdetection master(2020/12/11)
+
+## Install env
+```
+# getting start mmdectation
+# https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md
+
+# Pytorch 1.6.0  CUDA 10.2
+pip3 install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+# Install mmcv-full, we recommend you to install the pre-build package as below.
+pip3 install mmcv-full==latest+torch1.7.0+cu110 -f https://download.openmmlab.com/mmcv/dist/index.html
+
+# Clone the MMDetection repository.
+git clone https://github.com/open-mmlab/mmdetection.git
+cd mmdetection
+
+# Install build requirements and then install MMDetection.
+pip3 install -r requirements/build.txt
+pip3 install -v -e .  # or "python setup.py develop"
+```
+
 ## Reproducing Submission
 To reproduct my submission without retrainig, do the following steps:
 
