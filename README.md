@@ -59,13 +59,15 @@ After downloading images and spliting json file, the data directory is structure
 ```
 
 #### Download Classes Image
-Smaill SVHN Dataset: https://drive.google.com/drive/u/1/folders/1Ob5oT9Lcmz7g5mVOcYH3QugA7tV3WsSl
+Dataset: https://drive.google.com/drive/folders/1nglaZBJJ_Amonndw4nIVBh_UuCpp4gee?usp=sharing
 
 Download and extract *tain.tar.gz* and *test.tar.gz* to *data* directory.
 
 ### Splited training and validation json used coco style
 Use split8020.py to make train.txt .
-
+```
+$ python3 split8020.py
+```
 
 ## Training
 ### Setting
@@ -105,6 +107,7 @@ I didn't test muti-GPU training.
 ## Inference
 
 ### Inference single images
+you need open mmtosummit.py to change model path and output name
 ```
 $ python3 mmtosummit.py
 ```
