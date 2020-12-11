@@ -2,7 +2,8 @@
 Selected Topics in Visual Recognition using Deep Learning Homework 3 announcement HW3
 
 This Rep is base on [open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection). 
-More detail can see [mmdetection eetting start](https://github.com/open-mmlab/mmdetection#getting-started).
+
+More detail can see [mmdetection getting start](https://github.com/open-mmlab/mmdetection#getting-started).
 
 ## Hardware
 - Ubuntu 18.04 LTS
