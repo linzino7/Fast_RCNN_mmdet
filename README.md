@@ -86,5 +86,6 @@ $ python3 mmtosummit.py
 # mmdetection Modify
 
 # Reference:
-
+[Mask R-CNN](https://arxiv.org/abs/1703.06870) Paper
+[open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection)
 
