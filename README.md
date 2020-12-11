@@ -22,15 +22,14 @@ All required files except images are already in data directory.
 If you generate CSV files (duplicate image list, split, leak.. ), original files are overwritten. The contents will be changed, but It's not a problem.
 
 ### Prepare Images
-After downloading images, the data directory is structured as:
+After downloading images and spliting json file, the data directory is structured as:
 ```
-train.txt
-  +- data/
-  | +- train/
-  | +- test/
-  | +- training_labels.csv
-  | +- val.txt
-
+ data/
+  | +- train_images/
+  | +- test_images/
+  | -- pascal_train10.json
+  | -- pascal_train90.json
+  | -- test.json
 ```
 
 #### Download Classes Image
@@ -41,26 +40,26 @@ Download and extract *tain.tar.gz* and *test.tar.gz* to *data* directory.
 ### Splited training and validation json used coco style
 Use split8020.py to make train.txt .
 
-```
-# train.txt and val.txt  
-# left(x1) top(y1)  right(x2) bottom(y2) label
-image_path1 x1,y1,x2,y2,id x1,y1,x2,y2,id x1,y1,x2,y2,id ...
-image_path2 x1,y1,x2,y2,id x1,y1,x2,y2,id x1,y1,x2,y2,id ...
-...
-```
-
-Names file  example is in [data/SVHN.names](https://github.com/linzino7/pytorch-YOLOv4/blob/master/data/SVHN.names)
-```
-# names file
-Label1
-Label2
-Label3
-...
-```
 
 ## Training
 ### Setting
-You can setting bach size and epoch in [cfg.py](https://github.com/linzino7/pytorch-YOLOv4/blob/master/cfg.py)
+You can setting detail Hyperparameters in [configs/mask_rcnn/mask_rcnn_r50_zino.py](https://github.com/linzino7/Fast_RCNN_mmdet/configs/mask_rcnn/mask_rcnn_r50_zino.py)
+
+```
+total_epochs = 100
+checkpoint_config = dict(interval=1)
+log_config = dict(interval=50, hooks=[dict(type='TextLoggerHook')])
+dist_params = dict(backend='nccl')
+log_level = 'INFO'
+load_from = None
+resume_from = None
+workflow = [('train', 1)]
+classes = ('aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car',
+           'cat', 'chair', 'cow', 'diningtable', 'dog', 'horse', 'motorbike',
+           'person', 'pottedplant', 'sheep', 'sofa', 'train', 'tvmonitor')
+work_dir = './work_dirs/mask_rcnn_r50_caffe_fpn_mstrain-poly_1x_coco_posk_pretrain_200'
+gpu_ids = range(1, 1)
+```
 
 ### Train models
 To train models, run following commands.
@@ -81,7 +80,7 @@ I didn't test muti-GPU training.
 
 ### Inference single images
 ```
-$ 
+$ python3 mmtosummit.py
 ```
 
 # mmdetection Modify
