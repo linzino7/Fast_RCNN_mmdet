@@ -1,4 +1,4 @@
-# Fast_RCNN_mmdet
+# Mask_RCNN_mmdet
 Selected Topics in Visual Recognition using Deep Learning Homework 3 announcement HW3
 
 This Rep is base on [open-mmlab/mmdetection](https://github.com/open-mmlab/mmdetection). 
